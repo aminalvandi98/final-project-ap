@@ -145,10 +145,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="curvedPipe.cpp" />
+    <ClCompile Include="directPipe.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="plusPipe.cpp" />
+    <ClCompile Include="shape.cpp" />
+    <ClCompile Include="state.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="curvedPipe.h" />
+    <ClInclude Include="directPipe.h" />
+    <ClInclude Include="plusPipe.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="shape.h" />
+    <ClInclude Include="state.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
