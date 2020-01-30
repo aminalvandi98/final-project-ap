@@ -3,46 +3,171 @@
 
 using namespace std;
 using namespace sf;
-
+int k = 0;
 void playGame::assingGameBackground()
 {
 	int n = 1 + rand() % 5;
 	if (n == 1)
 	{
-		gameBackground[0][0] = gameBackground[0][1] = gameBackground[3][1] = gameBackground[3][3] = gameBackground[4][3] = new curvedPipe();
-		gameBackground[0][3] = gameBackground[0][4] = gameBackground[1][0] = gameBackground[1][1] = gameBackground[1][3] = gameBackground[1][4] = gameBackground[2][0] = gameBackground[2][1] = gameBackground[2][2] = gameBackground[2][3] = gameBackground[2][4] = gameBackground[3][0] = gameBackground[3][2] = gameBackground[4][1] = gameBackground[4][2] = gameBackground[4][4] = new directPipe();
-		gameBackground[0][2] = gameBackground[1][2] = gameBackground[3][4] = gameBackground[4][0] = gameBackground[4][4] = new plusPipe();
+		gameBackground[0][0] = new curvedPipe();
+		gameBackground[0][1] = new curvedPipe();
+		gameBackground[3][1] = new curvedPipe();
+		gameBackground[3][3] = new curvedPipe();
+		gameBackground[4][3] = new curvedPipe();
+		
+		gameBackground[0][3] = new directPipe();
+		gameBackground[0][4] = new directPipe();
+		gameBackground[1][0] = new directPipe();
+		gameBackground[1][1] = new directPipe();
+		gameBackground[1][3] = new directPipe();
+		gameBackground[1][4] = new directPipe();
+		gameBackground[2][0] = new directPipe();
+		gameBackground[2][1] = new directPipe();
+		gameBackground[2][2] = new directPipe();
+		gameBackground[2][3] = new directPipe();
+		gameBackground[2][4] = new directPipe();
+		gameBackground[3][0] = new directPipe();
+		gameBackground[3][2] = new directPipe();
+		gameBackground[4][1] = new directPipe();
+		gameBackground[4][2] = new directPipe();
+		gameBackground[4][4] = new directPipe();
+		
+		gameBackground[0][2] = new plusPipe();
+		gameBackground[1][2] = new plusPipe();
+		gameBackground[3][4] = new plusPipe();
+		gameBackground[4][0] = new plusPipe();
+		gameBackground[4][4] = new plusPipe();
+		
 
 	}
 	else if (n == 2)
 	{
-		gameBackground[0][2] = gameBackground[0][3] = gameBackground[0][4] = gameBackground[1][1] = gameBackground[1][4] = gameBackground[2][1] = gameBackground[2][2] = gameBackground[2][4] = gameBackground[3][2] = new curvedPipe();
-		gameBackground[0][0] = gameBackground[1][0] = gameBackground[1][2] = gameBackground[1][3] = gameBackground[3][0] = gameBackground[3][3] = gameBackground[3][4] = gameBackground[4][0] = gameBackground[4][1] = gameBackground[4][2] = gameBackground[4][3] = gameBackground[4][4] = new directPipe();
-		gameBackground[0][1] = gameBackground[2][0] = gameBackground[2][3] = gameBackground[3][1] = new plusPipe();
+		gameBackground[0][2] = new curvedPipe();
+		gameBackground[0][3] = new curvedPipe();
+		gameBackground[0][4] = new curvedPipe();
+		gameBackground[1][1] = new curvedPipe();
+		gameBackground[1][4] = new curvedPipe();
+		gameBackground[2][1] = new curvedPipe();
+		gameBackground[2][2] = new curvedPipe();
+		gameBackground[2][4] = new curvedPipe();
+		gameBackground[3][2] = new curvedPipe();
+		
+		gameBackground[0][0] = new directPipe();
+		gameBackground[1][0] = new directPipe();
+		gameBackground[1][2] = new directPipe();
+		gameBackground[1][3] = new directPipe();
+		gameBackground[3][0] = new directPipe();
+		gameBackground[3][3] = new directPipe();
+		gameBackground[3][4] = new directPipe();
+		gameBackground[4][0] = new directPipe();
+		gameBackground[4][1] = new directPipe();
+		gameBackground[4][2] = new directPipe();
+		gameBackground[4][3] = new directPipe();
+		gameBackground[4][4] = new directPipe();
+		
+		gameBackground[0][1] = new plusPipe();
+		gameBackground[2][0] = new plusPipe();
+		gameBackground[2][3] = new plusPipe();
+		gameBackground[3][1] = new plusPipe();
+		
 
 	}
 	else if (n == 3)
 	{
-		gameBackground[0][0] = gameBackground[0][3] = gameBackground[1][2] = gameBackground[2][2] = gameBackground[2][4] = gameBackground[3][1] = gameBackground[3][4] = gameBackground[4][0] = gameBackground[4][1] = gameBackground[4][2] = new curvedPipe();
-		gameBackground[0][1] = gameBackground[0][2] = gameBackground[1][1] = gameBackground[1][3] = gameBackground[1][4] = gameBackground[2][0] = gameBackground[2][1] = gameBackground[2][3] = gameBackground[3][2] = gameBackground[3][3] = gameBackground[4][3] = gameBackground[4][4] = new directPipe();
-		gameBackground[0][4] = gameBackground[1][0] = gameBackground[3][0] = new plusPipe();
+		gameBackground[0][0] = new curvedPipe();
+		gameBackground[0][3] = new curvedPipe();
+		gameBackground[1][2] = new curvedPipe();
+		gameBackground[2][2] = new curvedPipe();
+		gameBackground[2][4] = new curvedPipe();
+		gameBackground[3][1] = new curvedPipe();
+		gameBackground[3][4] = new curvedPipe();
+		gameBackground[4][0] = new curvedPipe();
+		gameBackground[4][1] = new curvedPipe();
+		gameBackground[4][2] = new curvedPipe();
+		
+		gameBackground[0][1] = new directPipe();
+		gameBackground[0][2] = new directPipe();
+		gameBackground[1][1] = new directPipe();
+		gameBackground[1][3] = new directPipe();
+		gameBackground[1][4] = new directPipe();
+		gameBackground[2][0] = new directPipe();
+		gameBackground[2][1] = new directPipe();
+		gameBackground[2][3] = new directPipe();
+		gameBackground[3][2] = new directPipe();
+		gameBackground[3][3] = new directPipe();
+		gameBackground[4][3] = new directPipe();
+		gameBackground[4][4] = new directPipe();
+		
+		gameBackground[0][4] = new plusPipe();
+		gameBackground[1][0] = new plusPipe();
+		gameBackground[3][0] = new plusPipe();
+		
 
 	}
 	else if (n == 4)
 	{
-		gameBackground[0][0] = gameBackground[0][2] = gameBackground[0][4] = gameBackground[1][4] = gameBackground[2][0] = gameBackground[2][1] = gameBackground[2][4] = gameBackground[3][0] = gameBackground[3][1] = gameBackground[3][2] =  gameBackground[3][4] = gameBackground[4][4] = new curvedPipe();
-		gameBackground[0][1] = gameBackground[1][1] = gameBackground[1][2] = gameBackground[1][3] = gameBackground[2][2] = gameBackground[2][3] = gameBackground[3][3] = gameBackground[4][1] = gameBackground[4][0] = gameBackground[4][3] = new directPipe();
-		gameBackground[0][3] = gameBackground[1][0] = gameBackground[4][2] = new plusPipe();
+		gameBackground[0][0] = new curvedPipe();
+		gameBackground[0][2] = new curvedPipe();
+		gameBackground[0][4] = new curvedPipe();
+		gameBackground[1][4] = new curvedPipe();
+		gameBackground[2][0] = new curvedPipe();
+		gameBackground[2][1] = new curvedPipe();
+		gameBackground[2][4] = new curvedPipe();
+		gameBackground[3][0] = new curvedPipe();
+		gameBackground[3][1] = new curvedPipe();
+		gameBackground[3][2] = new curvedPipe();
+		gameBackground[3][4] = new curvedPipe();
+		gameBackground[4][4] = new curvedPipe();
+		
+		gameBackground[0][1] = new directPipe();
+		gameBackground[1][1] = new directPipe();
+		gameBackground[1][2] = new directPipe();
+		gameBackground[1][3] = new directPipe();
+		gameBackground[2][2] = new directPipe();
+		gameBackground[2][3] = new directPipe();
+		gameBackground[3][3] = new directPipe();
+		gameBackground[4][1] = new directPipe();
+		gameBackground[4][0] = new directPipe();
+		gameBackground[4][3] = new directPipe();
+		
+		gameBackground[0][3] = new plusPipe();
+		gameBackground[1][0] = new plusPipe();
+		gameBackground[4][2] = new plusPipe();
+		
 
 	}
 	else if (n == 5)
 	{
-		gameBackground[0][1] = gameBackground[1][3] = gameBackground[2][1] = gameBackground[3][1] = gameBackground[3][2] = gameBackground[3][4] = gameBackground[4][0] = gameBackground[4][2] = gameBackground[4][4] = new curvedPipe();
-		gameBackground[0][0] = gameBackground[0][2] = gameBackground[0][3] = gameBackground[1][0] = gameBackground[1][1] = gameBackground[1][4] = gameBackground[2][0] = gameBackground[2][3] = gameBackground[2][4] = gameBackground[3][0] = gameBackground[3][3] = gameBackground[4][1] = new directPipe();
-		gameBackground[0][4] = gameBackground[1][2] = gameBackground[2][2] = gameBackground[4][3] = new plusPipe();
-
+		gameBackground[0][1] = new curvedPipe();
+		gameBackground[1][3] = new curvedPipe();
+		gameBackground[2][1] = new curvedPipe();
+		gameBackground[3][1] = new curvedPipe();
+		gameBackground[3][2] = new curvedPipe();
+		gameBackground[3][4] = new curvedPipe();
+		gameBackground[4][0] = new curvedPipe();
+		gameBackground[4][2] = new curvedPipe();
+		gameBackground[4][4] = new curvedPipe();
+		
+		gameBackground[0][0] = new directPipe();
+		gameBackground[0][2] = new directPipe();
+		gameBackground[0][3] = new directPipe();
+		gameBackground[1][0] = new directPipe();
+		gameBackground[1][1] = new directPipe();
+		gameBackground[1][4] = new directPipe();
+		gameBackground[2][0] = new directPipe();
+		gameBackground[2][3] = new directPipe();
+		gameBackground[2][4] = new directPipe();
+		gameBackground[3][0] = new directPipe();
+		gameBackground[3][3] = new directPipe();
+		gameBackground[4][1] = new directPipe();
+		
+		gameBackground[0][4] = new plusPipe();
+		gameBackground[1][2] = new plusPipe();
+		gameBackground[2][2] = new plusPipe();
+		gameBackground[4][3] = new plusPipe();
+		
+		
 	}
-	 
 
 }
 
@@ -146,11 +271,12 @@ void playGame::aboutPage()
 void playGame::gamePage()
 {
 	RenderWindow window(VideoMode(685, 800), "Plumber Water Pipe Game(Game Page)", sf::Style::Titlebar | sf::Style::Close);
-
+	
 	Texture IMGgamePage;
-	if (!IMGgamePage.loadFromFile("BG.png"))
-		return;
+	if (!IMGgamePage.loadFromFile("BG.png")) cout << "not load pic" << endl;
+		
 	Sprite sp(IMGgamePage);
+	
 	while (window.isOpen())
 	{
 		Event ev;
@@ -177,28 +303,39 @@ void playGame::gamePage()
 
 				}
 			}
-
 		}
-		/*while (k != 1)
-		{
-			for (size_t i = 150; i <= 657; i += 101.1)
-			{
-				for (size_t j = 87; j <= 594; j += 101.1)
-				{
 
-				}
-			}
-		}*/
-
-
-
-
-
-
-		window.clear();
 		window.draw(sp);
-		window.display();
+		
+			while (k != 1)
+			{
+				float i = 150;
+				for (int w = 0; w < 5 ;w++, i += 101.1)
+				{
+					float j = 87;
+					for ( int z = 0; z < 5 ;z++, j += 101.1)
+					{
+						cout << i << " " << j << " " << w << " " << z << " "  <<gameBackground[w][z]->getAddressOfPic()<< endl;
+						Texture t;
+						t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+						Sprite s(t);
+						s.setPosition(j, i);
+						window.draw(s);
+					}
+				}
+				k++;
+				window.display();
+			}
+
+		//window.clear();
+		
+		
+
+
+		
+		//window.display();
 	}
+
 
 }
 

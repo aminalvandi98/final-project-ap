@@ -1,6 +1,5 @@
 ﻿  playGame.cpp
-  main.cpp
-c:\users\amin\desktop\final project ap\ap final\ap final\main.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+c:\users\amin\desktop\final project ap\ap final\ap final\playgame.cpp(313): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\amin\desktop\final project ap\ap final\ap final\playgame.cpp(316): warning C4305: '+=': truncation from 'double' to 'float'
   ap final.vcxproj -> C:\Users\Amin\Desktop\final project ap\ap final\Debug\ap final.exe
   ap final.vcxproj -> C:\Users\Amin\Desktop\final project ap\ap final\Debug\ap final.pdb (Partial PDB)

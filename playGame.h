@@ -14,8 +14,8 @@
 
 class playGame
 {
-public:
 	std::array<std::array<shape*, 5>, 5> gameBackground;
+public:
 	void assingGameBackground();
 	void statrtPage();
 	void aboutPage();
