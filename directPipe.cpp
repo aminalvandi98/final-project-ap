@@ -1,5 +1,6 @@
 #include "directPipe.h"
 #include "state.h"
+#include "way.h"
 #include <vector>
 #include <array>
 #include <string>
@@ -27,17 +28,17 @@ void directPipe::createShape()
 	
 //---------------------------------------------------------------
 	string addressPipeUD = "column.png";
-	vector <string>stringUD;
-	stringUD.push_back("UP");
-	stringUD.push_back("DOWN");
-	myState.push_back(state(addressPipeUD, stringUD));
+	vector <way>UD;
+	UD.push_back(way(0, -1));
+	UD.push_back(way(0, 1));
+	myState.push_back(state(addressPipeUD, UD));
 
 //---------------------------------------------------------------
 	string addressPipeLR = "row.png";
-	vector <string>stringLR;
-	stringLR.push_back("LEFT");
-	stringLR.push_back("RIGHT");
-	myState.push_back(state(addressPipeLR, stringLR));
+	vector <way>LR;
+	LR.push_back(way(-1, 0));
+	LR.push_back(way(1, 0));
+	myState.push_back(state(addressPipeLR, LR));
 	nowState = rand() % myState.size();
 
 

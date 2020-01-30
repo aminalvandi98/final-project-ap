@@ -9,12 +9,17 @@
 
 std::string shape::getAddressOfPic()
 {
-	return myState[nowState].getaddressOfPicture;
+	return myState[nowState].getaddressOfPicture();
 }
 
 void shape::rotation()
 {
 	nowState = (nowState + 1) % myState.size();
+}
+
+state shape::getStatenow()
+{
+	return myState[nowState];
 }
 
 

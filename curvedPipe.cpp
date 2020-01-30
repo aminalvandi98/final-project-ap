@@ -1,5 +1,6 @@
 #include "curvedPipe.h"
 #include "state.h"
+#include "way.h"
 #include <vector>
 #include <array>
 #include <string>
@@ -42,28 +43,28 @@ void curvedPipe::createShape()
 //------------------------------------------------------------
 
 	string addressPipeUR = "L1.png";
-	vector <string>stringUR;
-	stringUR.push_back("UP");
-	stringUR.push_back("RIGHT");
-	myState.push_back(state(addressPipeUR, stringUR));
+	vector <way>UR;
+	UR.push_back(way(0, -1)); // up
+	UR.push_back(way(1, 0)); //right
+	myState.push_back(state(addressPipeUR, UR));
 //-----------------------------------------------------------------------
 	string addressPipeRD = "L2.png";
-	vector <string>stringRD;
-	stringRD.push_back("RIGHT");
-	stringRD.push_back("DOWN");
-	myState.push_back(state(addressPipeRD, stringRD));
+	vector <way>RD;
+	RD.push_back(way(1, 0)); // right
+	RD.push_back(way(0, 1)); // down
+	myState.push_back(state(addressPipeRD,RD));
 //-----------------------------------------------------------------------
 	string addressPipeLD = "L3.png";
-	vector <string>stringLD;
-	stringLD.push_back("LEFT");
-	stringLD.push_back("DOWN");
-	myState.push_back(state(addressPipeLD, stringLD));
+	vector <way>LD;
+	LD.push_back(way(-1, 0));//left
+	LD.push_back(way(0, 1)); // down
+	myState.push_back(state(addressPipeLD, LD));
 //-----------------------------------------------------------------------
 	string addressPipeUL = "L4.png";
-	vector <string>stringUL;
-	stringUL.push_back("UP");
-	stringUL.push_back("LEFT");
-	myState.push_back(state(addressPipeUL, stringUL));
+	vector <way>UL;
+	UL.push_back(way(0, -1)); // up
+	UL.push_back(way(-1, 0)); // left
+	myState.push_back(state(addressPipeUL, UL));
 //-----------------------------------------------------------------------
 	nowState = rand() % myState.size();
 

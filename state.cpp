@@ -3,7 +3,7 @@
 using namespace std;
 
 
-std::vector<std::string> state::whereIsWater(std::string input)
+std::vector<way> state::whereIsWater(way input)
 {
 	int finded = 0;
 	for (size_t i = 0; i < inputOutput.size(); i++)
@@ -17,19 +17,19 @@ std::vector<std::string> state::whereIsWater(std::string input)
 
 	if (finded)
 	{
-		vector<string> answer = inputOutput;
+		vector<way> answer = inputOutput;
 		answer.erase(answer.begin() + finded);
 		return answer;
 	}
 	else
 	{
 
-		return std::vector<std::string>();
+		return std::vector<way>();
 
 	}
 }
 
-state::state(std::string address, std::vector<std::string> input)
+state::state(std::string address, std::vector<way> input)
 	:addressOfPicture(address), inputOutput(input)
 {
 }

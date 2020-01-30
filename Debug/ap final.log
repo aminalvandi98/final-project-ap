@@ -1,9 +1,6 @@
-﻿  state.cpp
-  shape.cpp
-c:\users\amin\desktop\final project ap\ap final\ap final\shape.cpp(12): error C3867: 'state::getaddressOfPicture': non-standard syntax; use '&' to create a pointer to member
-c:\users\amin\desktop\final project ap\ap final\ap final\shape.cpp(12): error C2440: 'return': cannot convert from 'std::string (__thiscall state::* )(void)' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-  c:\users\amin\desktop\final project ap\ap final\ap final\shape.cpp(12): note: No constructor could take the source type, or constructor overload resolution was ambiguous
-  plusPipe.cpp
-  directPipe.cpp
-  curvedPipe.cpp
+﻿  playGame.cpp
+  main.cpp
+c:\users\amin\desktop\final project ap\ap final\ap final\main.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
+  ap final.vcxproj -> C:\Users\Amin\Desktop\final project ap\ap final\Debug\ap final.exe
+  ap final.vcxproj -> C:\Users\Amin\Desktop\final project ap\ap final\Debug\ap final.pdb (Partial PDB)

@@ -33,6 +33,12 @@
     <ClCompile Include="directPipe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="playGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="way.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -51,6 +57,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="directPipe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="way.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
