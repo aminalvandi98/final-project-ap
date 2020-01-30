@@ -23,18 +23,27 @@ void directPipe::createShape()
 	stringLR.push_back("LEFT");
 	stringLR.push_back("RIGHT");
 	myState.push_back(state(createLR, stringLR));*/
+
+	
 //---------------------------------------------------------------
 	string addressPipeUD = "column.png";
 	vector <string>stringUD;
 	stringUD.push_back("UP");
 	stringUD.push_back("DOWN");
 	myState.push_back(state(addressPipeUD, stringUD));
+
 //---------------------------------------------------------------
 	string addressPipeLR = "row.png";
 	vector <string>stringLR;
 	stringLR.push_back("LEFT");
 	stringLR.push_back("RIGHT");
 	myState.push_back(state(addressPipeLR, stringLR));
+	nowState = rand() % myState.size();
 
 
+}
+
+directPipe::directPipe()
+{
+	createShape();
 }

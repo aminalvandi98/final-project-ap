@@ -65,5 +65,11 @@ void curvedPipe::createShape()
 	stringUL.push_back("LEFT");
 	myState.push_back(state(addressPipeUL, stringUL));
 //-----------------------------------------------------------------------
+	nowState = rand() % myState.size();
 
+}
+
+curvedPipe::curvedPipe()
+{
+	createShape();
 }

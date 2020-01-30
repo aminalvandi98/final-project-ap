@@ -8,6 +8,7 @@ class directPipe:public shape
 {
 public:
 	void createShape()override;
+	directPipe();
 };
 
 #endif // !DIRECTPIPE_H

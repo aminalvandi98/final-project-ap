@@ -6,6 +6,7 @@ class plusPipe:public shape
 {
 public:
 	void createShape()override;
+	plusPipe();
 };
 #endif
 

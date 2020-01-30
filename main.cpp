@@ -3,7 +3,8 @@
 #include <SFML\System.hpp>
 #include <SFML\Network.hpp>
 #include <SFML\Window.hpp>
-
+#include <random>
+#include <ctime>
 using namespace std;
 using namespace sf;
 void aboutPage();
@@ -13,6 +14,7 @@ void gamePage();
 
 int main()
 {
+	srand(time(0));
 	startPage();
 	return 0;
 	

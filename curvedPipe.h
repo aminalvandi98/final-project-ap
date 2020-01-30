@@ -7,6 +7,7 @@ class curvedPipe:public shape
 {
 public:
 	void createShape()override;
+	curvedPipe();
 
 };
 #endif // !CURVEDPIPE_H

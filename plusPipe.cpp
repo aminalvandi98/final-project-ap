@@ -3,6 +3,7 @@
 #include <vector>
 #include <array>
 #include <string>
+#include <random>
 
 using namespace std;
 
@@ -27,4 +28,10 @@ void plusPipe::createShape()
 	stringUDLR.push_back("RIGHT");
 
 	myState.push_back(state(addressPipeUDLR, stringUDLR));
+	nowState = rand() % myState.size();
+}
+
+plusPipe::plusPipe()
+{
+	createShape();
 }
