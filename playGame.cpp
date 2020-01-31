@@ -180,9 +180,15 @@ void playGame::statrtPage()
 		return;
 	}
 	Sprite sprite1(IMG);
+	
+	Music music;
+	music.openFromFile("Untitled Session 1_mixdown.wav");
+	music.play();
+	bool flagMusic = true;
 
 	while (window.isOpen())
 	{
+		
 		Event ev;
 		while (window.pollEvent(ev))
 		{
@@ -213,6 +219,24 @@ void playGame::statrtPage()
 				{
 					window.close();
 					gamePage();
+				}
+			}
+			if (ev.mouseButton.button == Mouse::Left)
+			{
+				if ((ev.mouseButton.x >= 797 && ev.mouseButton.x <= 923) && (ev.mouseButton.y >= 277 && ev.mouseButton.y <= 402))
+				{
+					
+					music.pause();
+					flagMusic = false;
+					
+				}
+			}
+			if (ev.mouseButton.button == Mouse::Left)
+			{
+				if ((ev.mouseButton.x >= 797 && ev.mouseButton.x <= 923) && (ev.mouseButton.y >= 277 && ev.mouseButton.y <= 402) && (flagMusic == false))
+				{
+						music.play();
+					
 				}
 			}
 
@@ -287,10 +311,12 @@ void playGame::gamePage()
 			{
 			case Event::Closed:
 				window.close();
+				statrtPage();
 				break;
 			case Event::KeyPressed:
 				if (ev.key.code == Keyboard::Escape)
 					window.close();
+					statrtPage();
 				break;
 			}
 
@@ -299,13 +325,14 @@ void playGame::gamePage()
 				if ((ev.mouseButton.x >= 606 && ev.mouseButton.x <= 663) && (ev.mouseButton.y >= 14 && ev.mouseButton.y <= 57))
 				{
 					window.close();
-					this->statrtPage();
+					statrtPage();
 
 				}
 			}
 		}
-
+		
 		window.draw(sp);
+		
 		
 			while (k != 1)
 			{
@@ -325,15 +352,17 @@ void playGame::gamePage()
 				}
 				k++;
 				window.display();
+
 			}
+			
+
+
+			
 
 		//window.clear();
-		
-		
-
-
-		
 		//window.display();
+			
+			
 	}
 
 
