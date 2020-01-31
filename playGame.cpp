@@ -313,6 +313,7 @@ void playGame::gamePage()
 		window.draw(sp);
 		
 		
+		
 			while (k != 1)
 			{
 				float i = 150;
@@ -323,6 +324,7 @@ void playGame::gamePage()
 					{
 						Texture t;
 						t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+						cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
 						Sprite s(t);
 						s.setPosition(j, i);
 						window.draw(s);
