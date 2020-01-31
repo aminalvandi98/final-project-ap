@@ -1,9 +1,9 @@
 #pragma once
-#include <array>
 #include "shape.h"
 #include "directPipe.h"
 #include "plusPipe.h"
 #include "curvedPipe.h"
+#include <array>
 #include <SFML\Audio.hpp>
 #include <SFML\Graphics.hpp>
 #include <SFML\System.hpp>
@@ -20,7 +20,8 @@ public:
 	void statrtPage();
 	void aboutPage();
 	void gamePage();
-	playGame();
+	void rotate();
+	void freeObj();
 	~playGame();
 
 	

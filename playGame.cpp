@@ -184,7 +184,7 @@ void playGame::statrtPage()
 	Music music;
 	music.openFromFile("Untitled Session 1_mixdown.wav");
 	music.play();
-	bool flagMusic = true;
+	
 
 	while (window.isOpen())
 	{
@@ -209,7 +209,9 @@ void playGame::statrtPage()
 				if ((ev.mouseButton.x >= 49 && ev.mouseButton.x <= 170) && (ev.mouseButton.y >= 725 && ev.mouseButton.y <= 852))
 				{
 					window.close();
+					music.pause();
 					aboutPage();
+
 
 				}
 			}
@@ -218,22 +220,25 @@ void playGame::statrtPage()
 				if ((ev.mouseButton.x >= 554 && ev.mouseButton.x <= 731) && (ev.mouseButton.y >= 250 && ev.mouseButton.y <= 428))
 				{
 					window.close();
+					music.pause();
 					gamePage();
+					
+
 				}
 			}
 			if (ev.mouseButton.button == Mouse::Left)
 			{
-				if ((ev.mouseButton.x >= 797 && ev.mouseButton.x <= 923) && (ev.mouseButton.y >= 277 && ev.mouseButton.y <= 402))
+				if ((ev.mouseButton.x >= 790 && ev.mouseButton.x <= 918) && (ev.mouseButton.y >= 270 && ev.mouseButton.y <= 400))
 				{
 					
 					music.pause();
-					flagMusic = false;
+					
 					
 				}
 			}
 			if (ev.mouseButton.button == Mouse::Left)
 			{
-				if ((ev.mouseButton.x >= 797 && ev.mouseButton.x <= 923) && (ev.mouseButton.y >= 277 && ev.mouseButton.y <= 402) && (flagMusic == false))
+				if ((ev.mouseButton.x >= 1110 && ev.mouseButton.x <= 1238) && (ev.mouseButton.y >= 720 && ev.mouseButton.y <= 849) )
 				{
 						music.play();
 					
@@ -304,33 +309,7 @@ void playGame::gamePage()
 	while (window.isOpen())
 	{
 		Event ev;
-		while (window.pollEvent(ev))
-		{
-
-			switch (ev.type)
-			{
-			case Event::Closed:
-				window.close();
-				statrtPage();
-				break;
-			case Event::KeyPressed:
-				if (ev.key.code == Keyboard::Escape)
-					window.close();
-					statrtPage();
-				break;
-			}
-
-			if (ev.mouseButton.button == Mouse::Left)
-			{
-				if ((ev.mouseButton.x >= 606 && ev.mouseButton.x <= 663) && (ev.mouseButton.y >= 14 && ev.mouseButton.y <= 57))
-				{
-					window.close();
-					statrtPage();
-
-				}
-			}
-		}
-		
+		window.clear();
 		window.draw(sp);
 		
 		
@@ -342,7 +321,6 @@ void playGame::gamePage()
 					float j = 87;
 					for ( int z = 0; z < 5 ;z++, j += 101.1)
 					{
-						cout << i << " " << j << " " << w << " " << z << " "  <<gameBackground[w][z]->getAddressOfPic()<< endl;
 						Texture t;
 						t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
 						Sprite s(t);
@@ -357,21 +335,70 @@ void playGame::gamePage()
 			
 
 
-			
+			while (window.pollEvent(ev))
+			{
 
-		//window.clear();
-		//window.display();
-			
-			
+				switch (ev.type)
+				{
+					case Event::Closed:
+						window.close();
+						break;
+					case Event::KeyPressed:
+						if (ev.key.code == Keyboard::Escape)
+							window.close();
+						break;
+				}
+				
+				if(ev.mouseButton.button == Mouse::Left)
+				{
+					if ((ev.mouseButton.x >= 606 && ev.mouseButton.x <= 663) && (ev.mouseButton.y >= 14 && ev.mouseButton.y <= 57))
+					{
+						window.close();
+						k = 0;
+						freeObj();
+						assingGameBackground();
+						statrtPage();
+
+					}
+				}
+		}
 	}
 
 
 }
 
-playGame::playGame()
+void playGame::rotate()
 {
+
+
+
+
+
+}
+
+void playGame::freeObj()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			cout << i << "  " << j << endl;
+			shape* temp = gameBackground[i][j];
+			delete temp;
+			gameBackground[i][j] = nullptr;
+			
+
+		}
+	}
+
 }
 
 playGame::~playGame()
 {
+
+	freeObj();
+
 }
+
+
+
