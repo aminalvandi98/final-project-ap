@@ -7,6 +7,7 @@ int k = 0;
 void playGame::assingGameBackground()
 {
 	int n = 1 + rand() % 5;
+	cout << n << endl;
 	if (n == 1)
 	{
 		gameBackground[0][0] = new curvedPipe();
@@ -36,7 +37,6 @@ void playGame::assingGameBackground()
 		gameBackground[1][2] = new plusPipe();
 		gameBackground[3][4] = new plusPipe();
 		gameBackground[4][0] = new plusPipe();
-		gameBackground[4][4] = new plusPipe();
 		
 
 	}
