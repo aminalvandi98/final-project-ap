@@ -358,8 +358,8 @@ void playGame::gamePage()
 							//-------------------------------------------------------------------------------------------------------------------
 							if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 150 && Mouse::getPosition(window).y <= 251.1))
 							{
+									
 									gameBackground[0][0]->rotation();
-									//window.clear();
 									cout << "*** " << gameBackground[0][0]->getAddressOfPic() << endl;
 									Texture t;
 									t.loadFromFile(gameBackground[0][0]->getAddressOfPic());
@@ -692,6 +692,370 @@ void playGame::gamePage()
 								window.display();
 							}
 							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
+							{
+								gameBackground[2][2]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[2][2]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[2][2]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(289.2, 352.2);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
+							{
+								gameBackground[2][3]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[2][3]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[2][3]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(390.3, 352.2);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
+							{
+								gameBackground[2][4]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[2][4]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[2][4]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(491.4, 352.2);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
+							{
+								gameBackground[3][0]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[3][0]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[3][0]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(87, 453.3);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
+							{
+								gameBackground[3][1]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[3][1]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[3][1]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(188.1, 453.3);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
+							{
+								gameBackground[3][2]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[3][2]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[3][2]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(289.2, 453.3);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
+							{
+								gameBackground[3][3]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[3][3]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[3][3]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(390.3, 453.3);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
+							{
+								gameBackground[3][4]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[3][4]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[3][4]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(491.4, 453.3);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5 ))
+							{
+								gameBackground[4][0]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[4][0]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[4][0]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(87, 554.4);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
+							{
+								gameBackground[4][1]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[4][1]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[4][1]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(188.1, 554.4);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
+							{
+								gameBackground[4][2]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[4][2]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[4][2]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(289.2, 554.4);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
+							{
+								gameBackground[4][3]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[4][3]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[4][3]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(390.3, 554.4);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
+							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
+							{
+								gameBackground[4][4]->rotation();
+								//window.clear();
+								cout << "*** " << gameBackground[4][4]->getAddressOfPic() << endl;
+								Texture t;
+								t.loadFromFile(gameBackground[4][4]->getAddressOfPic());
+								//cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+								Sprite s(t);
+								s.setPosition(491.4, 554.4);
+								window.draw(s);
+								float i = 150;
+								for (int w = 0; w < 5; w++, i += 101.1)
+								{
+									float j = 87;
+									for (int z = 0; z < 5; z++, j += 101.1)
+									{
+										Texture t;
+										t.loadFromFile(gameBackground[w][z]->getAddressOfPic());
+										cout << w << "\t" << z << "\t" << gameBackground[w][z]->getAddressOfPic() << endl;
+										Sprite s(t);
+										s.setPosition(j, i);
+										window.draw(s);
+									}
+								}
+								window.display();
+							}
+							//--------------------------------------------------------------------------
 
 
 							
@@ -723,14 +1087,6 @@ void playGame::gamePage()
 
 }
 
-void playGame::rotate()
-{
-
-
-
-
-
-}
 
 void playGame::freeObj()
 {

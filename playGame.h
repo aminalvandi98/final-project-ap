@@ -14,13 +14,13 @@
 
 class playGame
 {
-	std::array<std::array<shape*, 5>, 5> gameBackground;
+	//std::array<std::array<shape*, 5>, 5> gameBackground;
+	shape* gameBackground[5][5];
 public:
 	void assingGameBackground();
 	void statrtPage();
 	void aboutPage();
 	void gamePage();
-	void rotate();
 	void freeObj();
 	~playGame();
 
