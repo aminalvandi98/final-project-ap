@@ -4,9 +4,11 @@
 using namespace std;
 using namespace sf;
 int k = 0;
+int n;
 void playGame::assingGameBackground()
 {
-	int n = 1 + rand() % 5;
+	n = 1 + rand() % 5;
+
 	cout << n << endl;
 	if (n == 1)
 	{
@@ -51,19 +53,19 @@ void playGame::assingGameBackground()
 		gameBackground[2][2] = new curvedPipe();
 		gameBackground[2][4] = new curvedPipe();
 		gameBackground[3][2] = new curvedPipe();
+		gameBackground[1][0] = new curvedPipe();
 		
 		gameBackground[0][0] = new directPipe();
-		gameBackground[1][0] = new directPipe();
 		gameBackground[1][2] = new directPipe();
 		gameBackground[1][3] = new directPipe();
 		gameBackground[3][0] = new directPipe();
 		gameBackground[3][3] = new directPipe();
-		gameBackground[3][4] = new directPipe();
+		gameBackground[3][4] = new curvedPipe();
 		gameBackground[4][0] = new directPipe();
 		gameBackground[4][1] = new directPipe();
 		gameBackground[4][2] = new directPipe();
 		gameBackground[4][3] = new directPipe();
-		gameBackground[4][4] = new directPipe();
+		gameBackground[4][4] = new curvedPipe();
 		
 		gameBackground[0][1] = new plusPipe();
 		gameBackground[2][0] = new plusPipe();
@@ -95,7 +97,7 @@ void playGame::assingGameBackground()
 		gameBackground[2][3] = new directPipe();
 		gameBackground[3][2] = new directPipe();
 		gameBackground[3][3] = new directPipe();
-		gameBackground[4][3] = new directPipe();
+		gameBackground[4][3] = new curvedPipe();
 		gameBackground[4][4] = new directPipe();
 		
 		gameBackground[0][4] = new plusPipe();
@@ -382,6 +384,8 @@ void playGame::gamePage()
 										}
 									}
 									window.display();
+									checkSolved(gameBackground, n);
+									
 							}
 							//-------------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 150 && Mouse::getPosition(window).y <= 251.1))
@@ -410,6 +414,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//-----------------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 150 && Mouse::getPosition(window).y <= 251.1))
@@ -438,6 +443,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 150 && Mouse::getPosition(window).y <= 251.1))
@@ -466,6 +472,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 150 && Mouse::getPosition(window).y <= 251.1))
@@ -494,6 +501,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 251.1 && Mouse::getPosition(window).y <= 352.2))
@@ -522,6 +530,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 251.1 && Mouse::getPosition(window).y <= 352.2))
@@ -550,6 +559,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 251.1 && Mouse::getPosition(window).y <= 352.2))
@@ -578,6 +588,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 251.1 && Mouse::getPosition(window).y <= 352.2))
@@ -606,6 +617,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 251.1 && Mouse::getPosition(window).y <= 352.2))
@@ -634,6 +646,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
@@ -662,6 +675,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
@@ -690,6 +704,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
@@ -718,6 +733,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
@@ -746,6 +762,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 352.2 && Mouse::getPosition(window).y <= 453.3))
@@ -774,6 +791,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
@@ -802,6 +820,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
@@ -830,6 +849,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
@@ -858,6 +878,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
@@ -886,6 +907,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 453.3 && Mouse::getPosition(window).y <= 554.4))
@@ -914,6 +936,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 87 && Mouse::getPosition(window).x <= 188.1) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5 ))
@@ -942,6 +965,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 188.1 && Mouse::getPosition(window).x <= 289.2) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
@@ -970,6 +994,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 289.2 && Mouse::getPosition(window).x <= 390.3) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
@@ -998,6 +1023,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 390.3 && Mouse::getPosition(window).x <= 491.4) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
@@ -1026,6 +1052,7 @@ void playGame::gamePage()
 									}
 								}
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 							else if ((Mouse::getPosition(window).x >= 491.4 && Mouse::getPosition(window).x <= 592.5) && (Mouse::getPosition(window).y >= 554.4 && Mouse::getPosition(window).y <= 655.5))
@@ -1053,7 +1080,9 @@ void playGame::gamePage()
 										window.draw(s);
 									}
 								}
+								
 								window.display();
+								checkSolved(gameBackground, n);
 							}
 							//--------------------------------------------------------------------------
 
@@ -1103,6 +1132,229 @@ void playGame::freeObj()
 		}
 	}
 
+}
+
+void playGame::checkSolved(std::array<std::array<shape*, 5>, 5>& gameBackground , int n) const
+{
+	if (n == 1)
+	{
+		if (gameBackground[0][0]->getAddressOfPic() == "L1.png" &&
+			gameBackground[0][1]->getAddressOfPic() == "L3.png" &&
+			gameBackground[1][1]->getAddressOfPic() == "column.png" &&
+			gameBackground[2][1]->getAddressOfPic() == "column.png" &&
+			gameBackground[3][1]->getAddressOfPic() == "L1.png" &&
+			gameBackground[3][2]->getAddressOfPic() == "row.png" &&
+			gameBackground[3][3]->getAddressOfPic() == "L3.png" &&
+			gameBackground[4][3]->getAddressOfPic() == "L1.png" &&
+			gameBackground[4][4]->getAddressOfPic() == "row.png")
+		{
+			RenderWindow window(VideoMode(480, 270), "You win", sf::Style::Titlebar | sf::Style::Close);
+
+			Texture IMGwin;
+			if (!IMGwin.loadFromFile("win.png"))
+				return;
+			Sprite sp(IMGwin);
+			while (window.isOpen())
+			{
+				Event ev;
+				while (window.pollEvent(ev))
+				{
+
+					switch (ev.type)
+					{
+					case Event::Closed:
+						window.close();
+						break;
+					case Event::KeyPressed:
+						if (ev.key.code == Keyboard::Escape)
+							window.close();
+						break;
+					}
+				}
+
+				window.clear();
+				window.draw(sp);
+				window.display();
+			}
+			
+		}
+	}
+	if (n == 2)
+	{
+		if (gameBackground[0][0]->getAddressOfPic() == "column.png" &&
+			gameBackground[1][0]->getAddressOfPic() == "L1.png" &&
+			gameBackground[1][1]->getAddressOfPic() == "L3.png" &&
+			gameBackground[2][1]->getAddressOfPic() == "L1.png" &&
+			gameBackground[2][2]->getAddressOfPic() == "L3.png" &&
+			gameBackground[3][2]->getAddressOfPic() == "L1.png" &&
+			gameBackground[3][3]->getAddressOfPic() == "row.png" &&
+			gameBackground[3][4]->getAddressOfPic() == "L3.png" &&
+			gameBackground[4][4]->getAddressOfPic() == "L1.png")
+		{
+			RenderWindow window(VideoMode(480, 270), "You win", sf::Style::Titlebar | sf::Style::Close);
+
+			Texture IMGwin;
+			if (!IMGwin.loadFromFile("win.png"))
+				return;
+			Sprite sp(IMGwin);
+			while (window.isOpen())
+			{
+				Event ev;
+				while (window.pollEvent(ev))
+				{
+
+					switch (ev.type)
+					{
+					case Event::Closed:
+						window.close();
+						break;
+					case Event::KeyPressed:
+						if (ev.key.code == Keyboard::Escape)
+							window.close();
+						break;
+					}
+				}
+
+				window.clear();
+				window.draw(sp);
+				window.display();
+			}
+
+		}
+	}
+	if (n == 3)
+	{
+		if (gameBackground[0][0]->getAddressOfPic() == "L1.png" &&
+			gameBackground[0][1]->getAddressOfPic() == "row.png" &&
+			gameBackground[0][2]->getAddressOfPic() == "row.png" &&
+			gameBackground[0][3]->getAddressOfPic() == "L3.png" &&
+			gameBackground[1][3]->getAddressOfPic() == "column.png" &&
+			gameBackground[2][3]->getAddressOfPic() == "column.png" &&
+			gameBackground[3][3]->getAddressOfPic() == "column.png" &&
+			gameBackground[4][3]->getAddressOfPic() == "L1.png" &&
+			gameBackground[4][4]->getAddressOfPic() == "row.png")
+		{
+			RenderWindow window(VideoMode(480, 270), "You win", sf::Style::Titlebar | sf::Style::Close);
+
+			Texture IMGwin;
+			if (!IMGwin.loadFromFile("win.png"))
+				return;
+			Sprite sp(IMGwin);
+			while (window.isOpen())
+			{
+				Event ev;
+				while (window.pollEvent(ev))
+				{
+
+					switch (ev.type)
+					{
+					case Event::Closed:
+						window.close();
+						break;
+					case Event::KeyPressed:
+						if (ev.key.code == Keyboard::Escape)
+							window.close();
+						break;
+					}
+				}
+
+				window.clear();
+				window.draw(sp);
+				window.display();
+			}
+
+		}
+	}
+	if (n == 4)
+	{
+		if (gameBackground[0][0]->getAddressOfPic() == "L1.png" &&
+			gameBackground[0][1]->getAddressOfPic() == "row.png" &&
+			gameBackground[0][2]->getAddressOfPic() == "L3.png" &&
+			gameBackground[1][2]->getAddressOfPic() == "column.png" &&
+			gameBackground[2][2]->getAddressOfPic() == "column.png" &&
+			gameBackground[3][2]->getAddressOfPic() == "L1.png" &&
+			gameBackground[3][3]->getAddressOfPic() == "row.png" &&
+			gameBackground[3][4]->getAddressOfPic() == "L3.png" &&
+			gameBackground[4][4]->getAddressOfPic() == "L1.png")
+		{
+			RenderWindow window(VideoMode(480, 270), "You win", sf::Style::Titlebar | sf::Style::Close);
+
+			Texture IMGwin;
+			if (!IMGwin.loadFromFile("win.png"))
+				return;
+			Sprite sp(IMGwin);
+			while (window.isOpen())
+			{
+				Event ev;
+				while (window.pollEvent(ev))
+				{
+
+					switch (ev.type)
+					{
+					case Event::Closed:
+						window.close();
+						break;
+					case Event::KeyPressed:
+						if (ev.key.code == Keyboard::Escape)
+							window.close();
+						break;
+					}
+				}
+
+				window.clear();
+				window.draw(sp);
+				window.display();
+			}
+
+		}
+	}
+	if (n == 5)
+	{
+		if (gameBackground[0][0]->getAddressOfPic() == "column.png" &&
+			gameBackground[1][0]->getAddressOfPic() == "column.png" &&
+			gameBackground[2][0]->getAddressOfPic() == "column.png" &&
+			gameBackground[3][0]->getAddressOfPic() == "column.png" &&
+			gameBackground[4][0]->getAddressOfPic() == "L1.png" &&
+			gameBackground[4][1]->getAddressOfPic() == "row.png" &&
+			gameBackground[4][2]->getAddressOfPic() == "L4.png" &&
+			gameBackground[3][2]->getAddressOfPic() == "L2.png" &&
+			gameBackground[3][3]->getAddressOfPic() == "row.png" &&
+			gameBackground[3][4]->getAddressOfPic() == "L3.png" &&
+			gameBackground[4][4]->getAddressOfPic() == "L1.png")
+		{
+			RenderWindow window(VideoMode(480, 270), "You win", sf::Style::Titlebar | sf::Style::Close);
+
+			Texture IMGwin;
+			if (!IMGwin.loadFromFile("win.png"))
+				return;
+			Sprite sp(IMGwin);
+			while (window.isOpen())
+			{
+				Event ev;
+				while (window.pollEvent(ev))
+				{
+
+					switch (ev.type)
+					{
+					case Event::Closed:
+						window.close();
+						break;
+					case Event::KeyPressed:
+						if (ev.key.code == Keyboard::Escape)
+							window.close();
+						break;
+					}
+				}
+
+				window.clear();
+				window.draw(sp);
+				window.display();
+			}
+
+		}
+	}
+
+	
 }
 
 playGame::~playGame()

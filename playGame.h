@@ -1,5 +1,6 @@
 #pragma once
 #include "shape.h"
+#include "state.h"
 #include "directPipe.h"
 #include "plusPipe.h"
 #include "curvedPipe.h"
@@ -14,14 +15,15 @@
 
 class playGame
 {
-	//std::array<std::array<shape*, 5>, 5> gameBackground;
-	shape* gameBackground[5][5];
+	std::array<std::array<shape*, 5>, 5> gameBackground;
+	//shape* gameBackground[5][5];
 public:
 	void assingGameBackground();
 	void statrtPage();
 	void aboutPage();
 	void gamePage();
 	void freeObj();
+	void checkSolved(std::array<std::array<shape*, 5>, 5> & , int) const;
 	~playGame();
 
 	
